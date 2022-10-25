@@ -7,7 +7,7 @@ import './Header.css'
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
-        <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater'>
+        <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater' id='navbar-container'>
             <div className='relative flex items-center justify-between'>
                 <NavLink
                     to='/'
@@ -27,7 +27,7 @@ const Header = () => {
                             to='/course'
                             aria-label='Home'
                             title='Home'
-                            className={`font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 ${({ isActive }) => isActive ? 'active' : undefined}`}
+                            className={`font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-black-accent-400 ${({ isActive }) => isActive ? 'active' : undefined}`}
                         >
                             Courses
                         </NavLink>
@@ -37,7 +37,7 @@ const Header = () => {
                             to='/faq'
                             aria-label='Cart'
                             title='Cart'
-                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            className='font-medium tracking-wide text-white first:transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                             <p> FAQ</p>
                         </NavLink>
@@ -47,7 +47,7 @@ const Header = () => {
                             to='/blog'
                             aria-label='About Us'
                             title='About Us'
-                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                             Blog
                         </NavLink>
@@ -57,7 +57,7 @@ const Header = () => {
                             to='/login'
                             aria-label='About Us'
                             title='About Us'
-                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'
                         >
                             Login
                         </NavLink>
@@ -67,7 +67,7 @@ const Header = () => {
                     <button
                         aria-label='Open Menu'
                         title='Open Menu'
-                        className='p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50'
+                        className='p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-purple-50 focus:bg-black-50'
                         onClick={() => setIsMenuOpen(true)}
                     >
                         <svg className='w-5 text-gray-600' viewBox='0 0 24 24'>

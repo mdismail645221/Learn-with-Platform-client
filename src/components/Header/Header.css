@@ -1,0 +1,14 @@
+#navbar-container{
+    background-color: #570DF8;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+}
+
+ul li{
+    list-style: none;
+
+}

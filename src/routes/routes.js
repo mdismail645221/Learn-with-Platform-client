@@ -1,10 +1,10 @@
-import Courses from "../shared/Courses/Courses";
 import Login from "../shared/Login/Login";
 import Register from "../shared/Register/Register";
-
-const { createBrowserRouter } = require("react-router-dom");
-const { default: Main } = require("../layout/Main");
-const { default: Home } = require("../pages/Home/Home");
+import Main from '../layout/Main'
+import Home from '../pages/Home/Home'
+import { createBrowserRouter } from "react-router-dom";
+import CoursesContainer from "../pages/CoursesContainer/CoursesContainer";
+import CoursesContainerLeft from "../shared/CoursesContainerLeft/CoursesContainerLeft";
 
 
 
@@ -28,8 +28,13 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'course',
-                element: <Courses></Courses>
-            }
+                element: <CoursesContainer></CoursesContainer>,
+                loader:  ()=> fetch(`http://localhost:5000/category`)
+            }, 
+
+          
         ]
-    }
+    },
+
+    
 ])

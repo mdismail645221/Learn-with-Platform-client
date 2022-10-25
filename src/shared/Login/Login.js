@@ -1,19 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import '../Login/Login.css';
 
 const Login = () => {
+
     return (
         <section id='login-container'>
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-white mx-auto py-7 dark:text-gray-100" >
                 <h1 className="text-2xl font-bold text-center">Login</h1>
-                <form novalidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
+                <form action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
-                        <label for="username" className="block dark:text-gray-400">Email:</label>
+                        <label htmlFor="username" className="block dark:text-gray-400">Email:</label>
                         <input type="email" name="username" id="username" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300" />
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label for="password" className="block dark:text-gray-400">Password</label>
+                        <label htmlFor="password" className="block dark:text-gray-400">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300" />
                         <div className="flex justify-end text-xs text-gray-400 pt-3">
                             <Link rel="noopener noreferrer" className='text-red-500 hover:text-red-700 font-semibold hover:font-bold text-sm hover:underline'>Forgot Password?</Link>

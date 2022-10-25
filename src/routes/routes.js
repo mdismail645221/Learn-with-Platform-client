@@ -4,7 +4,7 @@ const { default: Home } = require("../pages/Home/Home");
 
 
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,

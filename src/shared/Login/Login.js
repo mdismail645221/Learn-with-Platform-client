@@ -19,7 +19,7 @@ const Login = () => {
                             <Link rel="noopener noreferrer" className='text-red-500 hover:text-red-700 font-semibold hover:font-bold text-sm hover:underline'>Forgot Password?</Link>
                         </div>
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 bg-[#570DF8] text-white font-semibold">Sign in</button>
+                    <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 bg-[#570DF8] text-white font-semibold">Log in</button>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>

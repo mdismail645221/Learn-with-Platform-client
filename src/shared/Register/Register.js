@@ -5,19 +5,24 @@ import '../Register/Register.js'
 const Register = () => {
     return (
         <section id='login-container'>
-            <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-white mx-auto py-7 dark:text-gray-100" >
+            <div className="w-full max-w-xl p-8 space-y-3 rounded-xl bg-white mx-auto py-7 dark:text-gray-100" >
                 <h1 className="text-2xl font-bold text-center">Register</h1>
                 <form novalidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
-                        <label for="username" className="block dark:text-gray-400">Username</label>
+                        <label for="username" className="block dark:text-gray-400">Your Full Name:</label>
                         <input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300" />
+                    </div>
+                    <div className="space-y-1 text-sm">
+                        <label for="photourl" className="block dark:text-gray-400">PhotoURL</label>
+                        <input type="text" name="photourl" id="photourl" placeholder="Photo url" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300" />
+                    </div>
+                    <div className="space-y-1 text-sm">
+                        <label for="email" className="block dark:text-gray-400">Email</label>
+                        <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300" />
                     </div>
                     <div className="space-y-1 text-sm">
                         <label for="password" className="block dark:text-gray-400">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300" />
-                        <div className="flex justify-end text-xs text-gray-400 pt-3">
-                            <Link rel="noopener noreferrer" className='text-red-500 hover:text-red-700 font-semibold hover:font-bold text-sm'>Forgot Password?</Link>
-                        </div>
                     </div>
                     <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 bg-[#570DF8] text-white font-semibold">Sign in</button>
                 </form>
@@ -43,9 +48,9 @@ const Register = () => {
                         </svg>
                     </button>
                 </div>
-                <p className="text-xs text-center sm:px-6 dark:text-gray-400">Don't have an account?
-                    <a rel="noopener noreferrer" href="#" className="underline dark:text-gray-100">Sign up</a>
-                </p>
+                <Link to='/login' className="text-sm w-full mx-auto hover:underline sm:px-6 text-blue-600 text-center">
+                    you have already register? please Login Now
+                </Link>
             </div>
         </section>
     );

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import Images from '../../assets/images/favicon.png';
 import './Header.css'
 
 
@@ -14,10 +15,10 @@ const Header = () => {
                     title='Smart Home'
                     className={`inline-flex items-center`}
                 >
-                    <img className='w-14 md:w-14 rounded-full'  alt="main-logo" />
+                    <img className='w-14 md:w-14 rounded-full' src={Images}  alt="main-logo" />
 
                     <span className='ml-2 text-lg md:text-xl font-bold tracking-wide text-white uppercase'>
-                        Quiz Context
+                        Learn With Platfrom
                     </span>
                 </NavLink>
                 <ul className='flex items-center hidden space-x-8 lg:flex'>
@@ -86,9 +87,9 @@ const Header = () => {
                                             title='Company'
                                             className='inline-flex items-center'
                                         >
-                                            <img className='w-20' alt="main-logo" />
+                                            <img className='w-20' src={Images} alt="main-logo" />
                                             <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                                                Quiz Context
+                                               Learn With Platfrom
                                             </span>
                                         </NavLink>
                                     </div>

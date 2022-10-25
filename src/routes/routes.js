@@ -1,3 +1,4 @@
+import Courses from "../shared/Courses/Courses";
 import Login from "../shared/Login/Login";
 import Register from "../shared/Register/Register";
 
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Register></Register>
+            },
+            {
+                path: 'course',
+                element: <Courses></Courses>
             }
         ]
     }

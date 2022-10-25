@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider';
 import '../Login/Login.css';
 
 const Login = () => {
+
+    const {createUser} = useContext(AuthContext)
+
+
+    // const singInUser = () =
+
 
     return (
         <section id='login-container'>
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-white mx-auto py-7 dark:text-gray-100" >
                 <h1 className="text-2xl font-bold text-center">Login</h1>
-                <form action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
+                <form  className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="username" className="block dark:text-gray-400">Email:</label>
                         <input type="email" name="username" id="username" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300" />

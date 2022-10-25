@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom';
 import Images from '../../assets/images/favicon.png';
+import { AuthContext } from '../../contexts/AuthProvider';
 import './Header.css'
 
 
 const Header = () => {
+
+    const {user} = useContext(AuthContext);
+    // console.log(user)
+    
+
+
+
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
         <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater' id='navbar-container'>

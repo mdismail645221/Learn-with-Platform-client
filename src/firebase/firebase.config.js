@@ -5,16 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCWb53zYGVV1S2HW7okuERcpMuJFzEaw4w",
-  authDomain: "e-learn-with-platform.firebaseapp.com",
-  projectId: "e-learn-with-platform",
-  storageBucket: "e-learn-with-platform.appspot.com",
-  messagingSenderId: "286382184179",
-  appId: "1:286382184179:web:549b99157ca6e8c6500986"
+  apiKey: "AIzaSyApEUvQyfI4HNz1TRbwkVhRPuMTp32N2ug",
+  authDomain: "auth-edu-learning.firebaseapp.com",
+  projectId: "auth-edu-learning",
+  storageBucket: "auth-edu-learning.appspot.com",
+  messagingSenderId: "771067941686",
+  appId: "1:771067941686:web:fc24e934fec36b1bce9997"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 
 export default app;

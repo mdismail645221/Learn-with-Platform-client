@@ -10,36 +10,36 @@ const Header = () => {
         <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater'>
             <div className='relative flex items-center justify-between'>
                 <NavLink
-                    to='/home'
+                    to='/'
                     aria-label='Smart Home'
                     title='Smart Home'
                     className={`inline-flex items-center`}
                 >
                     <img className='w-14 md:w-14 rounded-full' src={Images}  alt="main-logo" />
 
-                    <span className='ml-2 text-lg md:text-xl font-bold tracking-wide text-white uppercase'>
+                    <span className='ml-2 text-lg md:text-xl font-bold tracking-wide text-drak uppercase'>
                         Learn With Platfrom
                     </span>
                 </NavLink>
                 <ul className='flex items-center hidden space-x-8 lg:flex'>
                     <li>
                         <NavLink
-                            to='/'
+                            to='/course'
                             aria-label='Home'
                             title='Home'
                             className={`font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 ${({ isActive }) => isActive ? 'active' : undefined}`}
                         >
-                            Home
+                            Courses
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
-                            to='/flowCart'
+                            to='/faq'
                             aria-label='Cart'
                             title='Cart'
                             className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                            <p> FlowChart</p>
+                            <p> FAQ</p>
                         </NavLink>
                     </li>
                     <li>
@@ -50,6 +50,16 @@ const Header = () => {
                             className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                             Blog
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to='/login'
+                            aria-label='About Us'
+                            title='About Us'
+                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                        >
+                            Login
                         </NavLink>
                     </li>
                 </ul>
@@ -113,22 +123,22 @@ const Header = () => {
                                     <ul className='space-y-4'>
                                         <li>
                                             <NavLink
-                                                to='/'
+                                                to='/courses'
                                                 aria-label='Cart'
                                                 title='Cart'
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                             >
-                                                <p> Home</p>
+                                                <p> Courses </p>
                                             </NavLink>
                                         </li>
                                         <li>
                                             <NavLink
-                                                to='/flowCart'
+                                                to='/faq'
                                                 aria-label='Cart'
                                                 title='Cart'
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                             >
-                                                <p> Flow Cart</p>
+                                                <p>FAQ</p>
                                             </NavLink>
                                         </li>
                                         <li>
@@ -139,6 +149,16 @@ const Header = () => {
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                             >
                                                 Blog
+                                            </NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink
+                                                to='/login'
+                                                aria-label='About Us'
+                                                title='About Us'
+                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                            >
+                                                Login
                                             </NavLink>
                                         </li>
                                     </ul>

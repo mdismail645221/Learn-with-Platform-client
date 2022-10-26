@@ -6,7 +6,7 @@ const CourseDetails = () => {
     const detailsCourse = useLoaderData();
     // console.log(detailsCourse)
     const { totalVideo, name, totalAssignment, rating, image, description, id } = detailsCourse;
-    console.log(id)
+    // console.log(id)
 
     return (
         <div className='my-12'>
@@ -38,7 +38,7 @@ const CourseDetails = () => {
                             <p>{description}</p>
                         </div>
                     </div>
-                    <button className=' bg-violet-600 px-5 py-2 my-2 rounded-lg'><Link to={id} className='text-2xl text-white'>GET PREMIUM ACCESS</Link></button>
+                    <button className=' bg-violet-600 px-5 py-2 my-2 rounded-lg'><Link to={`/premiumAccess/${id}`} className='text-2xl text-white'>GET PREMIUM ACCESS</Link></button>
                 </div>
             </div>
         </div>

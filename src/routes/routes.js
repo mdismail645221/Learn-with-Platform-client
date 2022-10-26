@@ -7,6 +7,8 @@ import CoursesContainer from "../pages/CoursesContainer/CoursesContainer";
 import CourseDetails from "../shared/CourseDetails/CourseDetails";
 import Blogs from "../pages/Blogs/Blogs";
 import FAQ from "../pages/FAQ/FAQ";
+import GetPremiumAccess from "../shared/GetPremiumAccess/GetPremiumAccess";
+import PrivateRoute from "../routes/PrivateRoute";
 
 
 
@@ -38,6 +40,11 @@ export const router = createBrowserRouter([
                 element: <CourseDetails></CourseDetails>,
                 loader: ({params})=> fetch(`https://b610-lerning-platform-server-side-mdismail645221.vercel.app/category/${params.id}`)
             }, 
+            {
+                path: '/premiumAccess/:id',
+                element: <PrivateRoute><GetPremiumAccess></GetPremiumAccess></PrivateRoute>,
+                loader: ({params})=> fetch(`https://b610-lerning-platform-server-side-mdismail645221.vercel.app/category/${params.id}`)
+            },
             {
                 path: 'blog',
                 element: <Blogs></Blogs>

@@ -27,6 +27,7 @@ const Login = () => {
             console.log(user)
         })
         .catch((error)=> {
+            toast.error("Oh NO..Wrong")
             setError(error.message)
         })
     }
@@ -40,10 +41,11 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
                 // form.reset()
-                toast("Successfully Login Good job", { duration: 3000 })
+                toast.success("Successfully Login Good job", { duration: 3000 })
                 // navigate(from, { replace: true })
             })
             .catch(err => {
+                toast.error("Oh NO..Wrong")
                 setError(err.message)
             })
     }
@@ -58,11 +60,12 @@ const Login = () => {
             const user = result.user;
             console.log(user)
             // form.reset()
-            toast("Successfully Login Good job", { duration: 3000 })
+            toast.success("Successfully Login Good job", { duration: 3000 })
             // navigate(from, { replace: true })
         })
         .catch(err => {
             setError(err.message)
+            toast.error("Oh NO..Wrong")
         })
     }
  

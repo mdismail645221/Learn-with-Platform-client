@@ -56,19 +56,19 @@ const Register = () => {
                 <form onSubmit={handleSubmit} className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="form-control space-y-1 text-sm">
                         <label className="label block dark:text-gray-400">Your Full Name:</label>
-                        <input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300" />
+                        <input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300" required />
                     </div>
                     <div className="form-control space-y-1 text-sm">
                         <label className="label block dark:text-gray-400">PhotoURL</label>
-                        <input type="text" name="photourl" id="photourl" placeholder="Photo url" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300 input input-bordered" />
+                        <input type="text" name="photourl" id="photourl"  placeholder="Example: https://i.ibb.co/CBQB7N5/biology.jpg" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300 input input-bordered" required />
                     </div>
                     <div className="form-control space-y-1 text-sm">
                         <label className="label block dark:text-gray-400">Email</label>
-                        <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300 input input-bordered" />
+                        <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300 input input-bordered" required />
                     </div>
-                    <div className="space-y-1 text-sm">
+                    <div className="space-y-1 text-sm form-control">
                         <label htmlFor="password" className="block dark:text-gray-400">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300 input input-bordered"  />
+                        <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700  dark:text-gray-100 focus:dark:border-violet-400 shadow-gray-500 shadow-lg bg-gray-300 input input-bordered" required />
                     </div>
                     <div className="form-control mt-6">
                         <p className='text-red-500'>{error}</p>

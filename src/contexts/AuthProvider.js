@@ -41,13 +41,15 @@ const AuthProvider = ({ children }) => {
     // google sing in 
     const googleSingIn = (provider) => {
         setLoading(true)
-      return  signInWithPopup(auth, provider)
+        return  signInWithPopup(auth, provider)
     }
+    // signInWithRedirect(auth, provider); --->
 
 
-    const githubSingIn = (githubProvider) => {
+
+    const githubSingIn = (gitProvider) => {
         setLoading(true)
-        return signInWithPopup(auth, githubProvider)
+        return signInWithPopup(auth, gitProvider)
     }
 
 
@@ -73,7 +75,10 @@ const AuthProvider = ({ children }) => {
         user,
         createUser,
         updateUserProfile,
-        lotOut
+        lotOut, 
+        logIn,
+        googleSingIn,
+        githubSingIn
     }
 
 

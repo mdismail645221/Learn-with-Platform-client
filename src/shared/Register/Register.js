@@ -6,7 +6,7 @@ import '../Register/Register.js'
 const Register = () => {
 
     const [error, setError] = useState()
-   const {createUser} = useContext(AuthContext)
+   const {createUser, updateUserProfile} = useContext(AuthContext)
 //    console.log(createUser)
 
     const handleSubmit = (event) => {
@@ -20,14 +20,30 @@ const Register = () => {
 
         createUser(email, password)
         .then(result=> {
+            form.reset()
             const user = result.user;
             console.log(user)
+            setError(null)
+            handleUpdateUserProfile(name, photourl)
         })
-        .then((error)=> {
+        .catch((error)=> {
             console.log(error)
-            // setError(error.message)
+            setError(error.message)
         })
+    }
 
+
+    // update user profile name and photo URL ---------->
+    const handleUpdateUserProfile = (name, photourl) =>{
+        const profile = {
+            displayName : name,
+            photoURL: photourl
+        }
+        updateUserProfile(profile)
+        .then(()=>{})
+        .catch((error)=>{
+            setError(error.message)
+        })
     }
 
 

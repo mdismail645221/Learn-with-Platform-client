@@ -7,15 +7,16 @@ import './Header.css'
 
 const Header = () => {
 
-    const {user} = useContext(AuthContext);
+    const { user, lotOut } = useContext(AuthContext);
     // console.log(user)
-    
+
+
 
 
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
-        <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater' id='navbar-container'>
+        <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater navbar-container'>
             <div className='relative flex items-center justify-between'>
                 <NavLink
                     to='/'
@@ -23,7 +24,7 @@ const Header = () => {
                     title='Smart Home'
                     className={`inline-flex items-center`}
                 >
-                    <img className='w-14 md:w-14 rounded-full' src={Images}  alt="main-logo" />
+                    <img className='w-14 md:w-14 rounded-full' src={Images} alt="main-logo" />
 
                     <span className='ml-2 text-lg md:text-xl font-bold tracking-wide text-drak uppercase'>
                         Learn With Platfrom
@@ -60,17 +61,38 @@ const Header = () => {
                             Blog
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink
-                            to='/login'
-                            aria-label='About Us'
-                            title='About Us'
-                            className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'
-                        >
-                            Login
-                        </NavLink>
-                    </li>
+
+
+                    {
+                        user ?
+
+                            <>
+                                <button onClick={lotOut} className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-purple-accent-400'>Log out</button>
+                                <img src={user.photoURL} alt="" className="self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                            </>
+
+
+                            :
+                            <li>
+                                <NavLink
+                                    to='/login'
+                                    aria-label='About Us'
+                                    title='Login Section'
+                                    className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'
+                                >
+                                    Login
+                                </NavLink>
+                            </li>
+
+                    }
+
+
+
+
                 </ul>
+
+
+                {/* functionality drop down toggle image -----> */}
                 <div className='lg:hidden'>
                     <button
                         aria-label='Open Menu'
@@ -94,9 +116,10 @@ const Header = () => {
                         </svg>
                     </button>
 
+                    {/* Toggle dropdowm Navber Button------>  */}
                     {isMenuOpen && (
-                        <div className='absolute top-0 left-0 w-full header-container'>
-                            <div className='p-5 bg-white border rounded shadow-sm'>
+                        <div className='absolute top-0 left-0 w-full header-container navbar-container'>
+                            <div className='p-5  border rounded shadow-sm'>
                                 <div className='flex items-center justify-between mb-4'>
                                     <div>
                                         <NavLink
@@ -105,9 +128,9 @@ const Header = () => {
                                             title='Company'
                                             className='inline-flex items-center'
                                         >
-                                            <img className='w-20' src={Images} alt="main-logo" />
-                                            <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                                               Learn With Platfrom
+                                            <img className='w-20 rounded-full hidden md:block' src={Images} alt="main-logo" />
+                                            <span className='ml-2 text-xl font-bold tracking-wide text-white text-center w-full uppercase'>
+                                                Learn With Platfrom
                                             </span>
                                         </NavLink>
                                     </div>
@@ -133,8 +156,8 @@ const Header = () => {
                                             <NavLink
                                                 to='/courses'
                                                 aria-label='Cart'
-                                                title='Cart'
-                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                                title='Course'
+                                                className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'
                                             >
                                                 <p> Courses </p>
                                             </NavLink>
@@ -143,8 +166,8 @@ const Header = () => {
                                             <NavLink
                                                 to='/faq'
                                                 aria-label='Cart'
-                                                title='Cart'
-                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                                title='FAQ'
+                                                className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'
                                             >
                                                 <p>FAQ</p>
                                             </NavLink>
@@ -153,22 +176,36 @@ const Header = () => {
                                             <NavLink
                                                 to='/blog'
                                                 aria-label='About Us'
-                                                title='About Us'
-                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                                title='BLOG'
+                                                className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'
                                             >
                                                 Blog
                                             </NavLink>
                                         </li>
-                                        <li>
-                                            <NavLink
-                                                to='/login'
-                                                aria-label='About Us'
-                                                title='About Us'
-                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                                            >
-                                                Login
-                                            </NavLink>
-                                        </li>
+
+
+                                        {
+                                            user ?
+
+                                                <>
+                                                    <button onClick={lotOut} className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-purple-accent-400'>Log out</button>
+                                                    <img src={user.photoURL} alt="" className="self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                                                </>
+
+
+                                                :
+                                                <li>
+                                                    <NavLink
+                                                        to='/login'
+                                                        aria-label='About Us'
+                                                        title='Login Section'
+                                                        className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'
+                                                    >
+                                                        Login
+                                                    </NavLink>
+                                                </li>
+                                        }
+
                                     </ul>
                                 </nav>
                             </div>

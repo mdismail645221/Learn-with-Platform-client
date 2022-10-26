@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* toggle theme change */
+#light{
+  background-color: #fff;
+}
+
+
+#dark{
+  background-color: #1E1E2F;
+  color: #fff;
+}
+
+#dark .form-control, h1 {
+  color: #000;
+}
+
+
+#drak .course-rightSide-Container h2 a{
+  color: #fff !important;
+}

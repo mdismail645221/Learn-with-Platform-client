@@ -70,6 +70,14 @@ const AuthProvider = ({ children }) => {
     }, []);
 
 
+    // toggle light and dark theme
+    const [theme, setTheme] = useState("light")
+
+    const toggleTheme = () =>{
+        setTheme((currentTheme)=> (currentTheme === "light" ? "dark" : "light"))
+    }
+
+
 
 
 
@@ -80,7 +88,9 @@ const AuthProvider = ({ children }) => {
         lotOut, 
         logIn,
         googleSingIn,
-        githubSingIn
+        githubSingIn,
+        theme, 
+        toggleTheme
     }
 
 

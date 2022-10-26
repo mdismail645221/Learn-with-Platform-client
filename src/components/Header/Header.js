@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom';
+import ReactSwitch from 'react-switch';
 import Images from '../../assets/images/favicon.png';
 import { AuthContext } from '../../contexts/AuthProvider';
 import './Header.css'
@@ -7,11 +8,8 @@ import './Header.css'
 
 const Header = () => {
 
-    const { user, lotOut } = useContext(AuthContext);
+    const { user, lotOut, toggleTheme, theme } = useContext(AuthContext);
     // console.log(user)
-
-
-
 
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -84,11 +82,11 @@ const Header = () => {
                                 </NavLink>
                             </li>
 
+
                     }
-
-
-
-
+              <div>
+                <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+              </div>
                 </ul>
 
 

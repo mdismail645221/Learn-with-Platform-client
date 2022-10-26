@@ -1,12 +1,28 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
 
 const Home = () => {
 
     return (
-        <div>
-            <h3>this is home</h3>
-        </div>
+        <Swiper
+            spaceBetween={50}
+            slidesPerView={3}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+        >
+            <SwiperSlide>
+                <div>
+                    <div>011111</div>
+                </div>
+            </SwiperSlide>
+            
+            ...
+        </Swiper>
     );
 };
 

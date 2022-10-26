@@ -152,7 +152,7 @@ const Header = () => {
                                     <ul className='space-y-4'>
                                         <li>
                                             <NavLink
-                                                to='/courses'
+                                                to='/course'
                                                 aria-label='Cart'
                                                 title='Course'
                                                 className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'

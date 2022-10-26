@@ -4,14 +4,14 @@ import { useLoaderData } from 'react-router-dom';
 const GetPremiumAccess = () => {
 
     const premiumAccess = useLoaderData();
-    console.log(premiumAccess)
+    const { totalVideo, name, totalAssignment, rating, image, description, id } = premiumAccess;
 
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                        Brand new
+                        Ratings {rating}
                     </p>
                 </div>
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
@@ -38,20 +38,19 @@ const GetPremiumAccess = () => {
                                 height="24"
                             />
                         </svg>
-                        <span className="relative">The</span>
+                        <span className="relative">Subject:</span>
                     </span>{' '}
-                    quick, brown fox jumps over a lazy dog
+                    {name}
                 </h2>
                 <p className="text-base text-gray-700 md:text-lg">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremque rem aperiam, eaque ipsa quae.
+                    {description}
                 </p>
             </div>
             <div className="mx-auto lg:max-w-2xl">
                 <div className="relative w-full transition-shadow duration-300 hover:shadow-xl">
                     <img
                         className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-96"
-                        src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                        src={image}
                         alt=""
                     />
                     <a

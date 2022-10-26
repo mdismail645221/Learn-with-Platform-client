@@ -10,7 +10,7 @@ const CoursesContainer = () => {
 
     const [courseDetails, setCourseDetails] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/courseItmes/`)
+        fetch(`https://b610-lerning-platform-server-side-mdismail645221.vercel.app/courseItmes`)
             .then(res => res.json())
             .then(data => setCourseDetails(data))
             .catch((error) => {

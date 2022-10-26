@@ -29,12 +29,12 @@ export const router = createBrowserRouter([
             {
                 path: 'course',
                 element: <CoursesContainer></CoursesContainer>,
-                loader:  ()=> fetch(`http://localhost:5000/category`)
+                loader:  ()=> fetch(`https://b610-lerning-platform-server-side-mdismail645221.vercel.app/category`)
             }, 
             {
                 path: '/courseDeatails/:id',
                 element: <CourseDetails></CourseDetails>,
-                loader: ({params})=> fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({params})=> fetch(`https://b610-lerning-platform-server-side-mdismail645221.vercel.app/category/${params.id}`)
             }
 
           

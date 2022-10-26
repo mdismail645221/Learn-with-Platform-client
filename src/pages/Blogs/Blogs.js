@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <section className="dark:bg-gray-800 dark:text-gray-100 ">
+        <section className="dark:bg-gray-800 dark:text-gray-100 " style={{paddingTop: "160px", marginBottom: "50px"}}>
             <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
                 <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">Importance</p>
                 <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">QUESION AND ANSWER</h2>

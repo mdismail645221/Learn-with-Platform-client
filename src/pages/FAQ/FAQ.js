@@ -2,7 +2,7 @@ import React from 'react';
 
 const FAQ = () => {
     return (
-        <div className='my-16'>
+        <div className='mb-16' style={{paddingTop: "160px"}}>
             <section className="dark:bg-gray-800 dark:text-gray-100">
                 <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
                     <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl flex justify-center space-y-4">এই প্লাটফম থেকে কি কি শিখতে পারবে:</h2>

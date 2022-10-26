@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider.js';
 import '../Register/Register.js'
 import {toast} from 'react-hot-toast'
@@ -9,6 +9,7 @@ const Register = () => {
     const [error, setError] = useState(null)
    const {createUser, updateUserProfile} = useContext(AuthContext)
 //    console.log(createUser)
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -27,6 +28,7 @@ const Register = () => {
             toast.success('Successfully Login')
             setError(null)
             handleUpdateUserProfile(name, photourl)
+            navigate('/')
         })
         .catch((error)=> {
             console.log(error)
@@ -50,7 +52,7 @@ const Register = () => {
 
 
     return (
-        <section id='login-container'>
+        <section id='login-container' style={{paddingTop: "160px"}}>
             <div className="w-full max-w-xl p-8 space-y-3 rounded-xl bg-white mx-auto py-7 dark:text-gray-100" >
                 <h1 className="text-2xl font-bold text-center">Register</h1>
                 <form onSubmit={handleSubmit} className="space-y-6 ng-untouched ng-pristine ng-valid">

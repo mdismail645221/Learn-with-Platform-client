@@ -20,8 +20,8 @@ const CoursesContainer = () => {
 
 
     return (
-        <div className='w-4/5 mx-auto'>
-            <h3 className='text-5xl text-center'>Courses</h3>
+        <div className='w-4/5 mx-auto' style={{paddingTop: "150px", paddingBottom: "50px"}}>
+            <h3 className='text-5xl text-center pb-20 pt-10'>WELLCOME, Our Free Content Courses</h3>
             <div className='md:flex justify-between'>
                 <div className='w-full mx-auto md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-4'>
                     {

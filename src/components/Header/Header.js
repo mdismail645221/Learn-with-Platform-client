@@ -14,7 +14,7 @@ const Header = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
-        <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater navbar-container'>
+        <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater navbar-container' style={{position: "fixed", top:"0", left: "0"}}>
             <div className='relative flex items-center justify-between'>
                 <NavLink
                     to='/'

@@ -4,11 +4,16 @@ import { AuthContext } from '../../contexts/AuthProvider';
 import '../Login/Login.css';
 import {toast} from 'react-hot-toast'
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Login = () => {
 
     const [error, setError] = useState(null)
     const {logIn, googleSingIn, githubSingIn} = useContext(AuthContext)
+    // useLocation provide in Private Route
+    const location = useLocation();
+    const navigate = useNavigate();
+    let from = location.state?.from?.pathname || '/';
 
     const handleLogIn = (event) => {
         event.preventDefault();
@@ -23,6 +28,7 @@ const Login = () => {
             toast.success('Successfully Login', {duration: 3000})
             form.reset()
             setError(null)
+            navigate(from, {replace: true})
             const user = result.user;
             console.log(user)
         })
@@ -40,9 +46,9 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                // form.reset()
+                setError(null)
                 toast.success("Successfully Login Good job", { duration: 3000 })
-                // navigate(from, { replace: true })
+                navigate(from, {replace: true})
             })
             .catch(err => {
                 toast.error("Oh NO..Wrong")
@@ -60,8 +66,9 @@ const Login = () => {
             const user = result.user;
             console.log(user)
             // form.reset()
+            navigate(from, {replace: true})
+            setError(null)
             toast.success("Successfully Login Good job", { duration: 3000 })
-            // navigate(from, { replace: true })
         })
         .catch(err => {
             setError(err.message)
@@ -86,6 +93,9 @@ const Login = () => {
                         <div className="flex justify-end text-xs text-gray-400 pt-3">
                             <Link rel="noopener noreferrer" className='text-red-500 hover:text-red-700 font-semibold hover:font-bold text-sm hover:underline hidden'>Forgot Password?</Link>
                         </div>
+                    </div>
+                    <div>
+                        <p className='text-red-600'>{error && error}</p>
                     </div>
                     <button type='submit' className="block w-full p-3 text-center rounded-sm dark:text-gray-900 bg-[#570DF8] text-white font-semibold">Log in</button>
                 </form>

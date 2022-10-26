@@ -1,11 +1,12 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, Link } from 'react-router-dom';
 
 const CourseDetails = () => {
 
     const detailsCourse = useLoaderData();
-    console.log(detailsCourse)
-    const { totalVideo, name, totalAssignment, rating, image, description, courseFee } = detailsCourse;
+    // console.log(detailsCourse)
+    const { totalVideo, name, totalAssignment, rating, image, description, id } = detailsCourse;
+    console.log(id)
 
     return (
         <div className='my-12'>
@@ -37,7 +38,7 @@ const CourseDetails = () => {
                             <p>{description}</p>
                         </div>
                     </div>
-                    <button className='text-2xl'><strong className='mr-3'>Course Fee:</strong>${courseFee}</button>
+                    <button className=' bg-violet-600 px-5 py-2 my-2 rounded-lg'><Link to={id} className='text-2xl text-white'>GET PREMIUM ACCESS</Link></button>
                 </div>
             </div>
         </div>

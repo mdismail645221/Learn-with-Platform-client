@@ -82,7 +82,6 @@ const Register = () => {
 
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-                    <p className="px-3 text-sm dark:text-gray-400">Login with social accounts</p>
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
                 </div>
                 {/* <div className="flex justify-center space-x-4">
@@ -103,7 +102,7 @@ const Register = () => {
                     </button>
                 </div> */}
                 <Link to='/login' className="text-sm w-full mx-auto hover:underline sm:px-6 text-blue-600 text-center">
-                    you have already register? please Login Now
+                    <p className='text-blue-600 hover:underline'>you have already register? please Login Now</p>
                 </Link>
             </div>
         </section>

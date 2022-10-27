@@ -49,7 +49,7 @@
   color: #fff;
 }
 
-#dark .form-control, h1 {
+#dark .form-control, h1, svg {
   color: #000;
 }
 

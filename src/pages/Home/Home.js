@@ -15,7 +15,7 @@ const Home = () => {
                     </h1>
                     <p className="mt-6 mb-8 text-lg sm:mb-12 ">নিজের শেখা নিজেই গুছিয়ে নেয়ার যাত্রা শুরু হোক । এখানে প্রতিদিন প্রায় আড়াই লাখ শিক্ষার্থীদের বিনামূল্যে শিক্ষা প্রদান করা হয়। ১৫ লাখ উজ্জ্বল মনের শিক্ষার্থীর সাথে তুমিও জয়েন করো Learn With Platfrom এ ।</p>
                     <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                        <button className="btn btn-primary text-white bg-blend-darken px-8"><Link to="/course">Courses</Link></button>
+                        <Link className="btn btn-primary text-white bg-blend-darken px-8" to="/course">Courses</Link>
                     </div>
                 </div>
                 <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">

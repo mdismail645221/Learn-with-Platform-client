@@ -49,7 +49,7 @@ const Header = () => {
                             title='faq'
                             className='font-medium tracking-wide text-white first:transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                            <p> FAQ</p>
+                            FAQ
                         </NavLink>
                     </li>
                     <li>
@@ -98,10 +98,10 @@ const Header = () => {
                     <button
                         aria-label='Open Menu'
                         title='Open Menu'
-                        className='p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-purple-50 focus:bg-black-50'
+                        className='p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline  bg-purple-200 hover:bg-purple-50 focus:bg-black-50'
                         onClick={() => setIsMenuOpen(true)}
                     >
-                        <svg className='w-5 text-gray-600' viewBox='0 0 24 24'>
+                        <svg className='w-5 text-red-600' viewBox='0 0 24 24'>
                             <path
                                 fill='currentColor'
                                 d='M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z'
@@ -208,6 +208,9 @@ const Header = () => {
                                                     </NavLink>
                                                 </li>
                                         }
+                                        <div>
+                                            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+                                        </div>
 
                                     </ul>
                                 </nav>

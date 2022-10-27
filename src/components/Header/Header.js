@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import ReactSwitch from 'react-switch';
 import Images from '../../assets/images/favicon.png';
 import { AuthContext } from '../../contexts/AuthProvider';
+import Tippy from '@tippy.js/react';
+// import 'Tippy.js/dist/tippy-bundle.iife'
 import './Header.css'
 
 
@@ -15,7 +17,7 @@ const Header = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
-        <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater navbar-container' style={{position: "fixed", top:"0", left: "0"}}>
+        <div className='px-4 py-5  w-full md:px-24 lg:px-8 header-conater navbar-container' style={{ position: "fixed", top: "0", left: "0" }}>
             <div className='relative flex items-center justify-between'>
                 <NavLink
                     to='/'
@@ -33,8 +35,8 @@ const Header = () => {
                     <li>
                         <NavLink
                             to='/course'
-                            aria-label='Home'
-                            title='Home'
+                            aria-label='course'
+                            title='course'
                             className={`font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-black-accent-400 ${({ isActive }) => isActive ? 'active' : undefined}`}
                         >
                             Courses
@@ -43,8 +45,8 @@ const Header = () => {
                     <li>
                         <NavLink
                             to='/faq'
-                            aria-label='Cart'
-                            title='Cart'
+                            aria-label='faq'
+                            title='faq'
                             className='font-medium tracking-wide text-white first:transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                             <p> FAQ</p>
@@ -53,8 +55,8 @@ const Header = () => {
                     <li>
                         <NavLink
                             to='/blog'
-                            aria-label='About Us'
-                            title='About Us'
+                            aria-label='blog'
+                            title='blog'
                             className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                             Blog
@@ -67,7 +69,9 @@ const Header = () => {
 
                             <>
                                 <button onClick={lotOut} className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-purple-accent-400'>Log out</button>
-                                <img src={user.photoURL} title={user.displayName} alt="userPhoto" className="cursor-pointer self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                                <Tippy content={<p className='text-white bg-slate-600 px-8 py-2 mt-5'>{user.displayName}</p>}>
+                                    <img src={user.photoURL} alt="userPhoto" className="cursor-pointer self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                                </Tippy>
                             </>
 
 
@@ -82,12 +86,10 @@ const Header = () => {
                                     Login
                                 </NavLink>
                             </li>
-
-
                     }
-              <div>
-                <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
-              </div>
+                    <div>
+                        <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+                    </div>
                 </ul>
 
 
@@ -154,7 +156,7 @@ const Header = () => {
                                         <li>
                                             <NavLink
                                                 to='/course'
-                                                aria-label='Cart'
+                                                aria-label='course'
                                                 title='Course'
                                                 className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'
                                             >
@@ -164,7 +166,7 @@ const Header = () => {
                                         <li>
                                             <NavLink
                                                 to='/faq'
-                                                aria-label='Cart'
+                                                aria-label='faq'
                                                 title='FAQ'
                                                 className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-drak-accent-400'
                                             >
@@ -188,7 +190,9 @@ const Header = () => {
 
                                                 <>
                                                     <button onClick={lotOut} className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-purple-accent-400'>Log out</button>
-                                                    <img src={user.photoURL} alt="" className="self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                                                    <Tippy content={<p className='text-white bg-slate-600 px-8 py-2 mt-5'>{user.displayName}</p>}>
+                                                        <img src={user.photoURL} alt="userPhoto" className="cursor-pointer self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                                                    </Tippy>
                                                 </>
 
 

@@ -54,6 +54,13 @@
 }
 
 
+#dark a {
+  color: #fff;
+}
+
 #drak .course-rightSide-Container h2 a{
+  color: #fff !important;
+}
+#dark #premiumAccessContainer{
   color: #fff !important;
 }

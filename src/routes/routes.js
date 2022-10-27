@@ -9,6 +9,7 @@ import Blogs from "../pages/Blogs/Blogs";
 import FAQ from "../pages/FAQ/FAQ";
 import GetPremiumAccess from "../shared/GetPremiumAccess/GetPremiumAccess";
 import PrivateRoute from "../routes/PrivateRoute";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
-        errorElement: <div>Not Found</div>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',

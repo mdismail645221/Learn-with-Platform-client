@@ -1,3 +1,4 @@
+import styled from 'daisyui/dist/styled';
 import React, { useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom';
 import ReactSwitch from 'react-switch';
@@ -66,7 +67,7 @@ const Header = () => {
 
                             <>
                                 <button onClick={lotOut} className='font-medium tracking-wide  text-white transition-colors duration-200 hover:text-deep-purple-accent-400'>Log out</button>
-                                <img src={user.photoURL} alt="" className="self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                                <img src={user.photoURL} title={user.displayName} alt="userPhoto" className="cursor-pointer self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
                             </>
 
 

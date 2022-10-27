@@ -19,8 +19,8 @@ const CourseDetails = () => {
     // console.log(id)
 
     return (
-        <>
-            <div className='my-12' ref={componentsRef} style={{ width: '100%', height: window.innerHeight }}>
+        <div style={{paddingTop: "140px", paddingBottom: "0px"}}>
+            <div className='my-12' ref={componentsRef} style={{width: '100%', height: window.innerHeight }}>
                 <div className="rounded-md shadow-md sm:w-96 md:w-1/2 md:mx-auto dark:bg-gray-900 dark:text-gray-100">
                     <div className="flex items-center justify-between p-3">
                         <div className="flex items-center space-x-2">
@@ -53,7 +53,7 @@ const CourseDetails = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

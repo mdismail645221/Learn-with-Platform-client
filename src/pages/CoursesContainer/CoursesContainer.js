@@ -5,18 +5,35 @@ import CoursesContainerRight from '../../shared/CoursesContainerRight/CoursesCon
 
 const CoursesContainer = () => {
 
+    const [loading, setLoading] = useState(false)
     const courseNames = useLoaderData()
 
 
     const [courseDetails, setCourseDetails] = useState([]);
     useEffect(() => {
+        setLoading(true)
         fetch(`https://b610-lerning-platform-server-side-mdismail645221.vercel.app/courseItmes`)
             .then(res => res.json())
-            .then(data => setCourseDetails(data))
+            .then(data => {
+                setCourseDetails(data)
+                setLoading(false)
+            })
             .catch((error) => {
                 console.log(error)
             })
     }, [])
+
+
+
+    if(loading){
+        return <>
+            <div class="flex justify-center items-center h-screen">
+                <div class="relative w-24 h-24 animate-spin rounded-full bg-gradient-to-r from-purple-400 via-blue-500 to-red-400 ">
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gray-200 rounded-full border-2 border-white"></div>
+                </div>
+            </div>
+        </>
+    }
 
 
     return (

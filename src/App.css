@@ -54,9 +54,11 @@
 }
 
 
-#dark a {
+#dark * {
   color: #fff;
 }
+
+
 
 #drak .course-rightSide-Container h2 a{
   color: #fff !important;

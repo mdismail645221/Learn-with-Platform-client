@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-primary text-primary-content">
             <div>
-                <img src={Image} className="w-20 h-20 rounded-full"></img>
+                <img src={Image} className="w-16 h-15 rounded-full"></img>
                 <p className="font-bold">
                     LEARN WITH PLATFORM. <br></br>Providing reliable  Education 
                 </p>
